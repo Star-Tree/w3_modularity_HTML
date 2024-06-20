@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/index.css">
+  <script src="w3.js"></script>
+</head>
+<body>
+  <div class="banner">
+    <img src="img/banner.jpg" alt="banner">
+  </div>
+
+  <div w3-include-html="block-1.html" class="block-1"></div>
+  <div w3-include-html="block-2.html" class="block-2"></div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      w3.includeHTML(() => {
+        document.querySelector(".block-2").classList.add("addClassByCallBackFunc")
+      });
+    });
+  </script>
+</body>
+</html>
